@@ -13,7 +13,7 @@ import Reachability
 class NetworkManager {
     class func makeCall<Value: Codable>(url: String, param: Parameters? = nil, isOffline: Bool = false, type: Method = .get, completion: ServiceEvent<Value>?) {
         
-        let fullUrlPath = "\(APIs.baseUrl)\(url)"
+        let fullUrlPath = "\(APIs.baseUrl)\(url)?api_key=\(Constants.API_KEY)"
         if isConnected() {
             
             let decoder = JSONDecoder()

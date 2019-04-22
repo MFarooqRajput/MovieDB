@@ -11,10 +11,10 @@ import Foundation
 class MovieRepositroy {
     
     class func getMovieList(completion: @escaping ServiceEvent<MovieList>) {
-        NetworkManager.makeCall(url: APIs.mainUrl, isOffline: true, type: .get, completion: completion)
+        NetworkManager.makeCall(url: APIs.movieListUrl, isOffline: true, type: .get, completion: completion)
     }
     
-    /*class func getMovieDetails(url: String, completion: @escaping ServiceEvent<SectionDetail>) {
+    class func getMovieDetails(url: String, completion: @escaping ServiceEvent<MovieDetail>) {
         NetworkManager.makeCall(url: url, isOffline: true, type: .get, completion: completion)
-    }*/
+    }
 }

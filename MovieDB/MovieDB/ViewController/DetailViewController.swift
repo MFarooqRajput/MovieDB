@@ -9,24 +9,33 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     var movie: Movie!
+    
+    var movieDetail: MovieDetail! {
+        didSet {
+            updateView()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        setupView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupView() {
+        loadData()
     }
-    */
-
+    
+    func loadData() {
+        MovieRepositroy.getMovieDetails(url: String(movie.id)) { [weak self] response in
+            self?.handleErrors(response: response) { data in
+                self?.movieDetail = data
+            }
+        }
+    }
+    
+    func updateView() {
+    }
 }

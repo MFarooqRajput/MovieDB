@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+
 class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var movieImageView: UIImageView!
@@ -19,13 +19,5 @@ class MovieTableViewCell: UITableViewCell {
     func configure(data: Movie) {
         movieTitleLabel.text = data.title
         movieImageView.setImage(url: URL(string: data.getLink()))
-    }
-}
-
-extension UIImageView {
-    func setImage(url: URL?) {
-        sd_setShowActivityIndicatorView(true)
-        sd_setIndicatorStyle(.gray)
-        sd_setImage(with: url)
     }
 }

@@ -10,15 +10,12 @@ import Foundation
 
 class MovieList: Codable {
     let list: [Movie]
-    //let responseCode: ResponseCode
     
     enum CodingKeys: String, CodingKey {
         case list = "results"
-        //ase responseCode
     }
     
     init(list: [Movie], responseCode: ResponseCode) {
         self.list = list
-        //self.responseCode = responseCode
     }
 }

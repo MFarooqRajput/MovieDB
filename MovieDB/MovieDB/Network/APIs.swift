@@ -9,6 +9,6 @@
 import Foundation
 
 class APIs {
-    static let baseUrl = ""
-    static let mainUrl = "https://api.themoviedb.org/3/movie/popular?api_key=fce0e28ab0cacfd2f85e32670ad51b11"
+    static let baseUrl = "https://api.themoviedb.org/3/movie/"
+    static let movieListUrl = "popular"
 }

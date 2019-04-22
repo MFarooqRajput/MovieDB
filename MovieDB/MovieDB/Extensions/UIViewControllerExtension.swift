@@ -19,7 +19,7 @@ extension UIViewController {
     }
     
     func showAlert(message: String) {
-        let alertController = UIAlertController(title: "MovieDB", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: Constants.displayName, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default)
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)

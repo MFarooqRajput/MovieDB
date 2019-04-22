@@ -36,10 +36,6 @@ class ViewController: UIViewController {
         movieTableView.tableFooterView = UIView(frame: .zero)
     }
     
-    /*@IBAction func refreshData(_ sender: UIBarButtonItem) {
-        loadData()
-    }*/
-    
     func loadData() {
         MovieRepositroy.getMovieList { [weak self] response in
             self?.handleErrors(response: response) { data in
@@ -49,7 +45,6 @@ class ViewController: UIViewController {
     }
     
     func updateView() {
-        //guard let data = movieData else { return }
         movieTableView.reloadData()
     }
         

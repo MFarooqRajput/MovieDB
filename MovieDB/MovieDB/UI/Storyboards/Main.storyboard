@@ -83,7 +83,7 @@
         <!--Movie Detail-->
         <scene sceneID="NtQ-5D-gqV">
             <objects>
-                <viewController title="Movie Detail" id="dJB-Vt-07m" sceneMemberID="viewController">
+                <viewController title="Movie Detail" id="dJB-Vt-07m" customClass="DetailViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJX-s2-hFc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
