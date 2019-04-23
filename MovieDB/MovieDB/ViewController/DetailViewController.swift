@@ -30,6 +30,8 @@ class DetailViewController: UIViewController {
         }
     }
     
+    let playerViewController = AVPlayerViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -84,15 +86,24 @@ class DetailViewController: UIViewController {
     }
     
     func playVideo(videoIdentifier: String?) {
-        let playerViewController = AVPlayerViewController()
+        //let playerViewController = AVPlayerViewController()
         self.present(playerViewController, animated: true, completion: nil)
         
         XCDYouTubeClient.default().getVideoWithIdentifier(videoIdentifier) { [weak playerViewController] (video: XCDYouTubeVideo?, error: Error?) in
             if let streamURLs = video?.streamURLs, let streamURL = (streamURLs[XCDYouTubeVideoQualityHTTPLiveStreaming] ?? streamURLs[YouTubeVideoQuality.hd720] ?? streamURLs[YouTubeVideoQuality.medium360] ?? streamURLs[YouTubeVideoQuality.small240]) {
                 playerViewController?.player = AVPlayer(url: streamURL)
+                
+                NotificationCenter.default.addObserver(self, selector: #selector(self.playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+                
+                playerViewController?.player?.play()
             } else {
                 self.dismiss(animated: true, completion: nil)
             }
         }
+    }
+    
+    @objc func playerItemDidReachEnd(notification: NSNotification) {
+        NotificationCenter.default.removeObserver(self)
+        playerViewController.dismiss(animated: true, completion: nil)
     }
 }
