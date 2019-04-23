@@ -26,4 +26,12 @@ class MovieDetail: Codable {
     func getLink() -> String {
         return Constants.movieImagesUrl + "\(self.poster_path)"
     }
+    
+    func getGenres() -> String {
+        var genresArray: [String] = []
+        for genre in genres {
+            genresArray.append(genre.name)
+        }
+        return genresArray.joined(separator: ",")
+    }
 }

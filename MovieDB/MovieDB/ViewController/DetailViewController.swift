@@ -44,17 +44,24 @@ class DetailViewController: UIViewController {
         movieImageView.setImage(url: URL(string: movie.getLink()))
         movieTitleLabel.text = movie.title
         
-        let regularAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]
+        let regularAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
         let boldAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 24)]
 
-        let genresString = NSMutableAttributedString(string: "Genres ", attributes: boldAttributes)
-        let dateString = NSMutableAttributedString(string: "Date ", attributes: boldAttributes)
-        let overviewString = NSMutableAttributedString(string: "Overview ", attributes: boldAttributes)
+        let genresString = NSMutableAttributedString(string: "Genres\n", attributes: boldAttributes)
+        let dateString = NSMutableAttributedString(string: "\n\nDate\n", attributes: boldAttributes)
+        let overviewString = NSMutableAttributedString(string: "\n\nOverview\n", attributes: boldAttributes)
         
-        let sectionText = NSMutableAttributedString(string: " ")
+        let genres = NSMutableAttributedString(string: movieDetail.getGenres(), attributes: regularAttributes)
+        let date = NSMutableAttributedString(string: movieDetail.release_date, attributes: regularAttributes)
+        let overview = NSMutableAttributedString(string: movieDetail.overview, attributes: regularAttributes)
+        
+        let sectionText = NSMutableAttributedString(string: "\n")
         sectionText.append(genresString)
+        sectionText.append(genres)
         sectionText.append(dateString)
+        sectionText.append(date)
         sectionText.append(overviewString)
+        sectionText.append(overview)
         
         movieTextView.attributedText = sectionText
     }
