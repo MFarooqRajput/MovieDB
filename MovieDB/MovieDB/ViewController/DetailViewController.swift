@@ -22,6 +22,12 @@ class DetailViewController: UIViewController {
         }
     }
     
+    var videos: VideoList? {
+        didSet {
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -41,7 +47,7 @@ class DetailViewController: UIViewController {
     }
     
     func updateView() {
-        movieImageView.setImage(url: URL(string: movie.getLink()))
+        movieImageView.setImage(url: URL(string: movie.getImageUrl()))
         movieTitleLabel.text = movie.title
         
         let regularAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
@@ -67,5 +73,11 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func watchTrailer(_ sender: Any) {
+        let urlString = String(movie.id) + "/videos"
+        MovieRepositroy.getMovieVideo(url: urlString) { [weak self] response in
+            self?.handleErrors(response: response) { data in
+                self?.videos = data
+            }
+        }
     }
 }

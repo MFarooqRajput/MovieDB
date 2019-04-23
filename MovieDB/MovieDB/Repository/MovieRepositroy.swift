@@ -17,4 +17,8 @@ class MovieRepositroy {
     class func getMovieDetails(url: String, completion: @escaping ServiceEvent<MovieDetail>) {
         NetworkManager.makeCall(url: url, isOffline: true, type: .get, completion: completion)
     }
+    
+    class func getMovieVideo(url: String, completion: @escaping ServiceEvent<VideoList>) {
+        NetworkManager.makeCall(url: url, isOffline: true, type: .get, completion: completion)
+    }
 }

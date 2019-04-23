@@ -18,7 +18,7 @@ class Movie: Codable {
         self.poster_path = poster_path
     }
     
-    func getLink() -> String {
-        return Constants.movieImagesUrl + "\(self.poster_path)"
+    func getImageUrl() -> String {
+        return APIs.movieImagesUrl + "\(self.poster_path)"
     }
 }

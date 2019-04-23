@@ -12,7 +12,6 @@ struct Constants {
     
     static let displayName = Bundle.main.displayName ?? "MovieDB"
     static let API_KEY = "fce0e28ab0cacfd2f85e32670ad51b11"
-    static let movieImagesUrl = "http://image.tmdb.org/t/p/w342"
 }
 
 extension Bundle {

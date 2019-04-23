@@ -18,6 +18,6 @@ class MovieTableViewCell: UITableViewCell {
     
     func configure(data: Movie) {
         movieTitleLabel.text = data.title
-        movieImageView.setImage(url: URL(string: data.getLink()))
+        movieImageView.setImage(url: URL(string: data.getImageUrl()))
     }
 }
