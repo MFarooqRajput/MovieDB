@@ -4,23 +4,27 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - XCDYouTubeKit (2.7.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - ReachabilitySwift
   - SDWebImage (~> 4.0.0)
+  - XCDYouTubeKit (~> 2.7)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - ReachabilitySwift
     - SDWebImage
+    - XCDYouTubeKit
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  XCDYouTubeKit: 3f4fd3eb3ed494a46a8f007b91315eed6dd6df1f
 
-PODFILE CHECKSUM: 98299c4c572513b096f33379bc8151961f93e7c7
+PODFILE CHECKSUM: f2388027bc406e50caf58f2b3e40789970de9aab
 
 COCOAPODS: 1.5.3

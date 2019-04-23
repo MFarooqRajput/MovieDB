@@ -11,6 +11,7 @@ target 'MovieDB' do
     pod 'Alamofire', '~> 4.7'
 	pod 'ReachabilitySwift'
 	pod 'SDWebImage', '~> 4.0.0'
+    pod "XCDYouTubeKit", "~> 2.7"
   target 'MovieDBTests' do
     inherit! :search_paths
     # Pods for testing
