@@ -86,7 +86,6 @@ class DetailViewController: UIViewController {
     }
     
     func playVideo(videoIdentifier: String?) {
-        //let playerViewController = AVPlayerViewController()
         self.present(playerViewController, animated: true, completion: nil)
         
         XCDYouTubeClient.default().getVideoWithIdentifier(videoIdentifier) { [weak playerViewController] (video: XCDYouTubeVideo?, error: Error?) in
