@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="724" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="RUA-vK-36f">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="RUA-vK-36f">
                                                     <rect key="frame" x="1" y="1" width="150" height="197.33333333333334"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="3ZQ-Qd-RfF"/>
@@ -37,7 +37,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tag-a6-fCn">
-                                                    <rect key="frame" x="155" y="1" width="175" height="28.666666666666668"/>
+                                                    <rect key="frame" x="155" y="1" width="524" height="28.666666666666668"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBt-I4-TDA">
                                 <rect key="frame" x="44" y="32" width="362" height="187.66666666666666"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aFf-07-sMw">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="aFf-07-sMw">
                                         <rect key="frame" x="0.0" y="0.0" width="362" height="187.66666666666666"/>
                                     </imageView>
                                 </subviews>
@@ -335,6 +335,12 @@
                         <viewLayoutGuide key="safeArea" id="rhl-Xi-UXS"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="A8B-xf-C5N"/>
+                                <exclude reference="YaA-3s-4UY"/>
+                                <exclude reference="bzs-Yr-tyJ"/>
+                                <exclude reference="dXZ-i5-Zgj"/>
+                                <exclude reference="lDx-Yr-f6X"/>
+                                <exclude reference="zEU-sx-9YK"/>
                                 <exclude reference="2qU-Zs-XM4"/>
                                 <exclude reference="7Ic-de-N3G"/>
                                 <exclude reference="CBm-Mh-bft"/>
@@ -345,12 +351,6 @@
                                 <exclude reference="pTB-UY-ibA"/>
                                 <exclude reference="vB7-3h-upb"/>
                                 <exclude reference="zD6-iF-1xK"/>
-                                <exclude reference="A8B-xf-C5N"/>
-                                <exclude reference="YaA-3s-4UY"/>
-                                <exclude reference="bzs-Yr-tyJ"/>
-                                <exclude reference="dXZ-i5-Zgj"/>
-                                <exclude reference="lDx-Yr-f6X"/>
-                                <exclude reference="zEU-sx-9YK"/>
                                 <exclude reference="8mT-IR-ihQ"/>
                                 <exclude reference="9sh-L5-epy"/>
                                 <exclude reference="Yba-JR-QSL"/>
@@ -370,6 +370,8 @@
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <include reference="bzs-Yr-tyJ"/>
+                                <include reference="lDx-Yr-f6X"/>
                                 <include reference="2qU-Zs-XM4"/>
                                 <exclude reference="7Ic-de-N3G"/>
                                 <include reference="e9a-TK-RIn"/>
@@ -377,8 +379,6 @@
                                 <exclude reference="pTB-UY-ibA"/>
                                 <exclude reference="vB7-3h-upb"/>
                                 <include reference="zD6-iF-1xK"/>
-                                <include reference="bzs-Yr-tyJ"/>
-                                <include reference="lDx-Yr-f6X"/>
                                 <include reference="8mT-IR-ihQ"/>
                                 <exclude reference="Yba-JR-QSL"/>
                                 <include reference="kzx-iW-0XH"/>
@@ -393,13 +393,13 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="CBm-Mh-bft"/>
-                                <include reference="HF9-xl-PYo"/>
-                                <include reference="Qjy-Ct-w28"/>
                                 <include reference="A8B-xf-C5N"/>
                                 <include reference="YaA-3s-4UY"/>
                                 <include reference="dXZ-i5-Zgj"/>
                                 <include reference="zEU-sx-9YK"/>
+                                <include reference="CBm-Mh-bft"/>
+                                <include reference="HF9-xl-PYo"/>
+                                <include reference="Qjy-Ct-w28"/>
                                 <include reference="9sh-L5-epy"/>
                                 <include reference="itS-5V-AsU"/>
                                 <include reference="UXo-2J-l6f"/>
@@ -438,6 +438,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="placeholder" width="50" height="65"/>
+        <image name="placeholder" width="266" height="200"/>
     </resources>
 </document>
