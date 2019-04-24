@@ -13,7 +13,7 @@
         <!--Movie Catalog-->
         <scene sceneID="4Gj-MW-Y24">
             <objects>
-                <viewController id="BL2-wb-jyX" customClass="ViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BL2-wb-jyX" customClass="ViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EBn-yE-VkY">
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
