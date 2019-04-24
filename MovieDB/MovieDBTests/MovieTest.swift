@@ -23,5 +23,4 @@ class MovieTest: XCTestCase {
         let movie = Movie(id: 1, title: "test movie", poster_path: "/test_path")
         XCTAssertEqual(movie.getImageUrl(), "http://image.tmdb.org/t/p/w342/test_path")
     }
-
 }
